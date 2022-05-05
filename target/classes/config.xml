@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="randomizer" class="Homework19.game.Randomizer">
+
+    </bean>
+
+    <bean id="guess_scanner" class="Homework19.game.Guess_Scanner">
+
+    </bean>
+
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basename" value="text"/>
+    </bean>
+
+
+    <bean id="guss_the_number" class="Homework19.game.Guess_The_Number">
+        <constructor-arg ref = "randomizer"/>
+        <constructor-arg ref = "guess_scanner"/>
+        <constructor-arg ref = "messageSource"/>
+    </bean>
+
+
+
+</beans>
