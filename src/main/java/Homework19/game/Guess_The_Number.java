@@ -18,7 +18,8 @@ public class Guess_The_Number {
     }
 
     public void Guess() {
-        System.out.println(rand.getRand());
+        System.out.println("Правильный ответ, для проверки работы программы:" + rand.getRand());
+        System.out.println();
 
 
         System.out.println(resource.getMessage("startGame", null, Locale.getDefault()));
